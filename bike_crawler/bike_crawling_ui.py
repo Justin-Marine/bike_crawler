@@ -17,7 +17,7 @@ form_class = uic.loadUiType("bike.ui")[0]
 locations = []
 
 urla='https://www.bikeseoul.com/app/station/moveStationSearchView.do?currentPageNo='
-header = ['bid','Rent_name','bcnt','address','latitude','logitude']
+header = ['bid','Rent_name','bcnts','address','latitude','logitude']
 
 class MyWindow(QMainWindow, form_class):
 

@@ -28,10 +28,10 @@ class execl_to_post:
                     conn.autocommit = True 
 
                     cur.execute('drop table if exists bike;')
-                    cur.execute('create table bike (id Serial, bid bigint, dname text, bcounts int, address text, latitude float, longitude float, geom geometry(Point, 4326)) with(OIDS=FALSE);')
+                    cur.execute('create table bike (id Serial, bid bigint, dname text, bcnts int, address text, latitude float, longitude float, geom geometry(Point, 4326)) with(OIDS=FALSE);')
 
                     for i,j in data.iterrows():
-                        sql= "insert into bike (bid, dname, bcounts, address, latitude, longitude, geom)\
+                        sql= "insert into bike (bid, dname, bcnts, address, latitude, longitude, geom)\
                             values ({bd}, '{name}', {bcounts}, '{address}', {lati}, {longi}, ST_SetSRID(ST_MakePoint({longi}, {lati}), 4326))".format(bd=data.bid[i],
                             name= data.Rent_name[i],
                             bcounts= data.bcnts[i],
