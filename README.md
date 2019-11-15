@@ -14,7 +14,7 @@ python bike_crawler.py
 
 ### [ GUI version ] : 
 ~~~
-# 시작 페이지 ~ 종료페이지 내용을 xlsx로 저장 or postgresql DB에 "Bike" 테이블로 저장.
+# 시작 페이지 ~ 종료페이지 내용을 xlsx로 저장 or postgresql DB에 "bike" 테이블(WGS84, EPSG:4326)로 저장. 
 python bike_crawler_ui.py
 ~~~
 
